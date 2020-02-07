@@ -29,6 +29,3 @@ Dataset has these fields:
 - Indicator Name
 - Indicator Code
 - CO2 emission volume from 1960 to 2019
-
-## Usage
-
