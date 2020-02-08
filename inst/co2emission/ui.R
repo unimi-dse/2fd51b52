@@ -8,7 +8,6 @@ ui <- fluidPage(
       id = "main_navbar",
 
       tabPanel(
-
         "Information",
         sidebarLayout(
           sidebarPanel(
@@ -29,7 +28,7 @@ ui <- fluidPage(
           mainPanel(
             id = "main",
             width = 8,
-            plotlyOutput("plot"),
+            plotly::plotlyOutput("plot"),
             sliderInput("range",
                         label = "Select year:",
                         min = 1960, max = 2019, value = c(1960, 2019),

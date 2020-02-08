@@ -102,9 +102,13 @@ a:focus {
 }
 
 #main {
-  background-color: #D6D6D7;
+  background-color: #f5f5f5;
   opacity: 0.6;
   border-radius: 0.20px;
+}
+
+#id {
+  background-color: #f5f5f5;
 }
 
 

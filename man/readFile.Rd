@@ -2,10 +2,13 @@
 % Please edit documentation in R/readFile.R
 \name{readFile}
 \alias{readFile}
-\title{dfd}
+\title{Read}
 \usage{
 readFile()
 }
+\value{
+data.frame
+}
 \description{
-dfd
+Read
 }

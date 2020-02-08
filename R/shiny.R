@@ -7,7 +7,7 @@
 #' @export
 #'
 appGUI <- function(){
-  sf <- system.file("co2emission", package = "midterm")
+  sf <- system.file("co2emission", package = "co2emission")
   print(sf)
   shiny::runApp(sf, display.mode = "normal", launch.browser = T)
 

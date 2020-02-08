@@ -1,6 +1,6 @@
 Package: co2emission
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Global CO2 emission analysis
 Version: 0.1.0
 Author: Hoai Nam Nguyen
 Maintainer: Hoai Nam Nguyen <nhnam1105@gmail.com>
@@ -8,5 +8,6 @@ Description: Show CO2 emission worldwide and forecast.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Import: devtools, shiny, forecast, plotly, roxygen2
+Depends: R (>= 3.5.0)
+Imports: shiny, forecast, plotly, ggplot2, roxygen2, dplyr
 RoxygenNote: 7.0.2
