@@ -1,21 +1,36 @@
 #'
-#'Read
+#'Read CSV file in inst/extdata/co2emission.csv to data.frame variable. This data will be used in this project.
 #'
 #'@return data.frame
-#'@export
+#'
 
 readFile <- function(){
-  sf <- system.file("extdata", "co2emission.csv", package = "midterm")
+
+  #read data from CSV file
+  sf <- system.file("extdata", "co2emission.csv", package = "co2emission")
   Data <- read.csv(sf)
+
+  # Change column name of the data.frame
   Data <- dataRefactor(Data)
   return(Data)
 }
 
+
+#'
+#'Change current column name into new name for easily manipulated
+#'
+#'@param dataFile data.frame. Original data file.
+#'
+#'@return data.frame
+#'
 dataRefactor <- function(dataFile){
-  cn <- c("CountryName", "CountryCode", "IndicatorName", "IndicatorCode", 1960:2019)
-  colnames(dataFile) <- cn
+
+  #Describe new column name
+  newColName <- c("CountryName", "CountryCode", "IndicatorName", "IndicatorCode", 1960:2019)
+  colnames(dataFile) <- newColName
 
   return(dataFile)
 }
+
 
 

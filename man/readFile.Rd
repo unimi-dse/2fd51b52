@@ -2,7 +2,7 @@
 % Please edit documentation in R/readFile.R
 \name{readFile}
 \alias{readFile}
-\title{Read}
+\title{Read CSV file in inst/extdata/co2emission.csv to data.frame variable. This data will be used in this project.}
 \usage{
 readFile()
 }
@@ -10,5 +10,5 @@ readFile()
 data.frame
 }
 \description{
-Read
+Read CSV file in inst/extdata/co2emission.csv to data.frame variable. This data will be used in this project.
 }

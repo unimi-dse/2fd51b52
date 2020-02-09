@@ -1,8 +1,11 @@
+
 # Define UI ----
 
 ui <- fluidPage(
+  # Load bootstrap and customize CSS file
   theme = "bootstrap.css",
   includeCSS("www/styles.css"),
+
     navbarPage(
       "CO2 EMISSION",
       id = "main_navbar",
@@ -10,7 +13,9 @@ ui <- fluidPage(
       tabPanel(
         "Information",
         sidebarLayout(
+
           sidebarPanel(
+            id = "sidepanel",
             width = 3,
             br(),
             br(),
@@ -25,6 +30,7 @@ ui <- fluidPage(
             br(),
             br()
           ),
+
           mainPanel(
             id = "main",
             width = 8,
@@ -34,26 +40,6 @@ ui <- fluidPage(
                         min = 1960, max = 2019, value = c(1960, 2019),
                         sep = "")
           )
-        )
-      ),
-
-      tabPanel(
-        "About",
-        sidebarLayout(
-          sidebarPanel(
-            width = 3,
-
-            br(),
-            br(),
-
-
-            br(),
-            br(),
-
-            br(),
-
-          ),
-          mainPanel(DT::dataTableOutput("dart_table"))
         )
       )
     )

@@ -10,5 +10,13 @@ appGUI()
 shiny app
 }
 \description{
-Runs a Graphical User Interface to evaluate the projects for Global CO2 emission analysis app
+Runs a Graphical User Interface to evaluate the projects for Global CO2 emission analysis app.
+}
+\details{
+By moving the Year slidebar, it will
+}
+\examples{
+\dontrun{
+appGUI()
+}
 }
