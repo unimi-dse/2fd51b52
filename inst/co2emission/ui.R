@@ -24,7 +24,7 @@ ui <- fluidPage(
             br(),
 
             sliderInput("lag",
-                        label = "Number of lags:",
+                        label = "Forecasting lags:",
                         min = 0, max = 10, value = 5,
                         sep = ""),
             br(),
