@@ -1,4 +1,5 @@
 # ----- Define server logic ----
+library(dplyr)
 server <- function(input, output) {
 
   # import data from CSV file
