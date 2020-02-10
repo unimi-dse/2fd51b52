@@ -2,6 +2,7 @@
 #'Read CSV file in inst/extdata/co2emission.csv to data.frame variable. This data will be used in this project.
 #'
 #'@return data.frame
+#'@importFrom utils read.csv
 #'
 
 readFile <- function(){

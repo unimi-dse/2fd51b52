@@ -1,5 +1,9 @@
-# ----- Define server logic ----
-# library(dplyr)
+#'
+#'Define server logic
+#'@importFrom dplyr %>%
+#'
+
+library(dplyr)
 server <- function(input, output) {
 
   # import data from CSV file
