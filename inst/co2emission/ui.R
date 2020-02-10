@@ -38,7 +38,8 @@ ui <- fluidPage(
             sliderInput("range",
                         label = "Select year:",
                         min = 1960, max = 2019, value = c(1960, 2019),
-                        sep = "")
+                        sep = "",
+                        ticks = FALSE)
           )
         )
       )
