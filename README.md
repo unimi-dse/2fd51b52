@@ -18,12 +18,12 @@ devtools::install_github('unimi-dse/2fd51b52')
 # load the package
 require(co2emission)
 ```
-### appGui
+### Shiny App
 The function  `appGUI()` loads Shiny application on the web browser. Type `?appGUI` for a complete description of the function. 
 ## Dataset
 The project uses dataset imported from [Data World Bank](https://data.worldbank.org/) as a CSV file.
 
-Dataset has these fields:
+Dataset has the following fields:
 - Country Name
 - Country Code
 - Indicator Name
