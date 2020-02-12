@@ -25,7 +25,7 @@ ui <- fluidPage(
 
             sliderInput("lag",
                         label = "Forecasting lags:",
-                        min = 0, max = 10, value = 5,
+                        min = 0, max = 50, value = 5,
                         sep = ""),
             br(),
             br()
@@ -36,7 +36,7 @@ ui <- fluidPage(
             width = 8,
             plotly::plotlyOutput("plot"),
             sliderInput("range",
-                        label = "Select year:",
+                        label = "Slide to change number of observation:",
                         min = 1960, max = 2019, value = c(1960, 2019),
                         sep = "",
                         ticks = FALSE)

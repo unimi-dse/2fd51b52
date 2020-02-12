@@ -1,3 +1,4 @@
+#'Data plotting
 #'@description  Plot data
 #'@param tsdata Time Series object. Object contain year observations and statistics about CO2 emission worldwide.
 #'@param forecastData Forecasting time series. This data are calculated by forecast
@@ -7,7 +8,7 @@
 #'@importFrom magrittr %>%
 #'@importFrom stats time
 #'@export
-
+#'
 plotData <- function(tsdata, forecastData, plotTit){
 
   f <- plotly::plot_ly() %>%
@@ -17,7 +18,7 @@ plotData <- function(tsdata, forecastData, plotTit){
                         color = I("gray95"), name = "95% confidence") %>%
     plotly::add_ribbons(x = time(forecastData$mean), ymin = forecastData$lower[, 1], ymax = forecastData$upper[, 1],
                         color = I("gray80"), name = "80% confidence") %>%
-    plotly::add_lines(x = time(forecastData$mean), y = forecastData$mean, color = I("blue"), name = "prediction") %>%
+    plotly::add_lines(x = time(forecastData$mean), y = forecastData$mean, color = I("blue"), name = "forecasting") %>%
     plotly::layout(title = plotTit ,xaxis = list(title = 'Year'),yaxis = list(title = 'Kiloton'))
 
   return(f)
