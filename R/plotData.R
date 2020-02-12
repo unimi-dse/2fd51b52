@@ -1,13 +1,12 @@
-#'
 #'@description  Plot data
 #'@param tsdata Time Series object. Object contain year observations and statistics about CO2 emission worldwide.
 #'@param forecastData Forecasting time series. This data are calculated by forecast
 #'@param plotTit Characters.
 #'@return plotly
 #'
-#'@importFrom dplyr mutate %>%
+#'@importFrom magrittr %>%
 #'@importFrom stats time
-#'
+#'@export
 
 plotData <- function(tsdata, forecastData, plotTit){
 
