@@ -7,10 +7,10 @@
 dataRefactor(dataFile)
 }
 \arguments{
-\item{dataFile}{data.frame. Original data file.}
+\item{dataFile}{data.frame Original data file.}
 }
 \value{
-data.frame
+dataFile data.frame Data file after naming the column name
 }
 \description{
 Change current column name into new name for easily manipulated

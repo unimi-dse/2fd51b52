@@ -7,7 +7,7 @@
 readFile()
 }
 \value{
-data.frame. Data.frame that contains all .csv file statistics
+Data data.frame that contains all .csv file statistics
 }
 \description{
 Read CSV file in inst/extdata/co2emission.csv to data.frame variable. This data will be used in this project.

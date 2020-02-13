@@ -7,13 +7,13 @@
 plotData(tsdata, forecastData = NULL, plotTit, fc)
 }
 \arguments{
-\item{tsdata}{Time Series object. Object contain year observations and statistics about CO2 emission worldwide.}
+\item{tsdata}{time Series object. Object contains year observations and statistics about CO2 emission worldwide.}
 
-\item{forecastData}{Forecasting time series. This data are calculated by forecast. NULL by default}
+\item{forecastData}{forecasting time series. This data are calculated by forecast. NULL by default}
 
-\item{plotTit}{Characters.}
+\item{plotTit}{character string The title of the plot that can be changed by selecting different country uiSelectInput}
 
-\item{fc}{Boolean. Passing argument TRUE if user check to checkbox for forecasting, else FALSE}
+\item{fc}{boolean. Passing argument TRUE if user check to checkbox for forecasting, else FALSE}
 }
 \value{
 plotly

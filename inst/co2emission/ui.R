@@ -1,30 +1,30 @@
 
 # Define UI ----
-ui <- fluidPage(
+ui <- shiny::fluidPage(
   shinyjs::useShinyjs(),
   # Load bootstrap and customize CSS file
   theme = "bootstrap.css",
   includeCSS("www/styles.css"),
 
-    navbarPage(
+   shiny::navbarPage(
       "CO2 EMISSION",
       id = "main_navbar",
 
-      tabPanel(
+      shiny::tabPanel(
         "Information",
-        sidebarLayout(
+        shiny::sidebarLayout(
 
-          sidebarPanel(
+          shiny::sidebarPanel(
             id = "sidepanel",
             width = 3,
             br(),
             br(),
-            uiOutput("var"),
+            shiny::uiOutput("var"),
             br(),
             br(),
-            checkboxInput("forecastCheckbox", label = "Forecast", value = FALSE),
+            shiny::checkboxInput("forecastCheckbox", label = "Forecast", value = FALSE),
             # uiOutput("forecastSlider"),
-            sliderInput("lag",
+            shiny::sliderInput("lag",
                         label = "Forecasting lags:",
                         min = 1, max = 50, value = 5,
                         sep = ""),
@@ -32,11 +32,11 @@ ui <- fluidPage(
             br()
           ),
 
-          mainPanel(
+          shiny::mainPanel(
             id = "main",
             width = 8,
             plotly::plotlyOutput("plot"),
-            sliderInput("range",
+            shiny::sliderInput("range",
                         label = "Slide to change number of observation:",
                         min = 1960, max = 2019, value = c(1960, 2019),
                         sep = "",
