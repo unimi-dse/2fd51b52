@@ -1,9 +1,9 @@
-#'Data plotting
+#'@title Data plotting
 #'@description  Plot data
-#'@param tsdata Time Series object. Object contain year observations and statistics about CO2 emission worldwide.
-#'@param forecastData Forecasting time series. This data are calculated by forecast
-#'@param plotTit Characters.
-#'@param fc Boolean. Passing argument TRUE if user check to checkbox for forecasting, else FALSE
+#'@param tsdata time Series object. Object contains year observations and statistics about CO2 emission worldwide.
+#'@param forecastData forecasting time series. This data are calculated by forecast. NULL by default
+#'@param plotTit character string The title of the plot that can be changed by selecting different country uiSelectInput
+#'@param fc boolean. Passing argument TRUE if user check to checkbox for forecasting, else FALSE
 #'@return plotly
 #'
 #'@importFrom dplyr %>%

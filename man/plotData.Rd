@@ -9,7 +9,7 @@ plotData(tsdata, forecastData = NULL, plotTit, fc)
 \arguments{
 \item{tsdata}{Time Series object. Object contain year observations and statistics about CO2 emission worldwide.}
 
-\item{forecastData}{Forecasting time series. This data are calculated by forecast}
+\item{forecastData}{Forecasting time series. This data are calculated by forecast. NULL by default}
 
 \item{plotTit}{Characters.}
 
