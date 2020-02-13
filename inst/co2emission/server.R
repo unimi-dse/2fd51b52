@@ -45,19 +45,22 @@ server <- function(input, output) {
     tsdata <- ts(data = dataShow$co2emission, frequency = 1, start = c(dataShow$year[1], 1), end = c(tail(dataShow$year, n=1), 1))
 
     #Forecast
+    plotTitle <- paste("CO2 EMISSION ", toupper(countryName))
+    forecastCheck <- input$forecastCheckbox
     numberOfLag <- input$lag
 
-    autoarima1 <- forecast::auto.arima(tsdata)
-
-    forecast1 <- forecast::forecast(autoarima1, h=numberOfLag)
-
-    plotTitle <- paste("CO2 EMISSION ", toupper(countryName))
-
-
-    #plot data
-    p <- plotData(tsdata, forecast1, plotTitle)
+    if(forecastCheck){
+      shinyjs::show(id = "lag")
+      numberOfLag <- input$lag
+      autoarima1 <- forecast::auto.arima(tsdata)
+      forecast1 <- forecast::forecast(autoarima1, h=numberOfLag)
+      p <- plotData(tsdata, forecast1, plotTitle, forecastCheck)
 
 
+    }else{
+      shinyjs::hide(id = "lag")
+      p <- plotData(tsdata =  tsdata, plotTit = plotTitle, fc = forecastCheck)
+    }
   })
 
 }

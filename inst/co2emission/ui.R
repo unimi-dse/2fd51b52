@@ -1,7 +1,7 @@
 
 # Define UI ----
-
 ui <- fluidPage(
+  useShinyjs(),
   # Load bootstrap and customize CSS file
   theme = "bootstrap.css",
   includeCSS("www/styles.css"),
@@ -22,10 +22,11 @@ ui <- fluidPage(
             uiOutput("var"),
             br(),
             br(),
-
+            checkboxInput("forecastCheckbox", label = "Forecast", value = FALSE),
+            # uiOutput("forecastSlider"),
             sliderInput("lag",
                         label = "Forecasting lags:",
-                        min = 0, max = 50, value = 5,
+                        min = 1, max = 50, value = 5,
                         sep = ""),
             br(),
             br()

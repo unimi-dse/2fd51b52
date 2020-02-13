@@ -4,7 +4,7 @@
 \alias{plotData}
 \title{Data plotting}
 \usage{
-plotData(tsdata, forecastData, plotTit)
+plotData(tsdata, forecastData = NULL, plotTit, fc)
 }
 \arguments{
 \item{tsdata}{Time Series object. Object contain year observations and statistics about CO2 emission worldwide.}
@@ -12,6 +12,8 @@ plotData(tsdata, forecastData, plotTit)
 \item{forecastData}{Forecasting time series. This data are calculated by forecast}
 
 \item{plotTit}{Characters.}
+
+\item{fc}{Boolean. Passing argument TRUE if user check to checkbox for forecasting, else FALSE}
 }
 \value{
 plotly

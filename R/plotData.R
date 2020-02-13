@@ -3,23 +3,33 @@
 #'@param tsdata Time Series object. Object contain year observations and statistics about CO2 emission worldwide.
 #'@param forecastData Forecasting time series. This data are calculated by forecast
 #'@param plotTit Characters.
+#'@param fc Boolean. Passing argument TRUE if user check to checkbox for forecasting, else FALSE
 #'@return plotly
 #'
-#'@importFrom magrittr %>%
+#'@importFrom dplyr %>%
 #'@importFrom stats time
 #'@export
 #'
-plotData <- function(tsdata, forecastData, plotTit){
+plotData <- function(tsdata, forecastData = NULL, plotTit, fc){
 
-  f <- plotly::plot_ly() %>%
-    plotly::add_lines(x = time(tsdata), y = tsdata,
-                      color = I("black"), name = "observed")  %>%
-    plotly::add_ribbons(x = time(forecastData$mean), ymin = forecastData$lower[, 2], ymax = forecastData$upper[, 2],
-                        color = I("gray95"), name = "95% confidence") %>%
-    plotly::add_ribbons(x = time(forecastData$mean), ymin = forecastData$lower[, 1], ymax = forecastData$upper[, 1],
-                        color = I("gray80"), name = "80% confidence") %>%
-    plotly::add_lines(x = time(forecastData$mean), y = forecastData$mean, color = I("blue"), name = "forecasting") %>%
-    plotly::layout(title = plotTit ,xaxis = list(title = 'Year'),yaxis = list(title = 'Kiloton'))
+  if(fc){
+    f <- plotly::plot_ly() %>%
+      plotly::add_lines(x = time(tsdata), y = tsdata,
+                        color = I("black"), name = "observed")  %>%
+      plotly::add_ribbons(x = time(forecastData$mean), ymin = forecastData$lower[, 2], ymax = forecastData$upper[, 2],
+                          color = I("gray95"), name = "95% confidence") %>%
+      plotly::add_ribbons(x = time(forecastData$mean), ymin = forecastData$lower[, 1], ymax = forecastData$upper[, 1],
+                          color = I("gray80"), name = "80% confidence") %>%
+      plotly::add_lines(x = time(forecastData$mean), y = forecastData$mean, color = I("blue"), name = "forecasting") %>%
+      plotly::layout(title = plotTit ,xaxis = list(title = 'Year'),yaxis = list(title = 'Kiloton'))
+
+
+  } else{
+    f <- plotly::plot_ly() %>%
+      plotly::add_lines(x = time(tsdata), y = tsdata,
+                        color = I("black"), name = "observed")  %>%
+      plotly::layout(title = plotTit ,xaxis = list(title = 'Year'),yaxis = list(title = 'Kiloton'))
+  }
 
   return(f)
 }

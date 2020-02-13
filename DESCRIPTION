@@ -8,6 +8,6 @@ Description: Show CO2 emission worldwide and forecast.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Depends: R (>= 3.5.0)
-Imports: shiny, forecast, plotly, ggplot2, roxygen2, magrittr, dplyr
+Depends: R (>= 3.5.0), dplyr
+Imports: shiny, forecast, plotly, ggplot2, roxygen2, magrittr, shinyjs
 RoxygenNote: 7.0.2
