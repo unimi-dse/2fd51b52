@@ -1,7 +1,7 @@
 
 # Define UI ----
 ui <- fluidPage(
-  useShinyjs(),
+  shinyjs::useShinyjs(),
   # Load bootstrap and customize CSS file
   theme = "bootstrap.css",
   includeCSS("www/styles.css"),
