@@ -24,6 +24,7 @@ plotData <- function(tsdata, forecastData = NULL, plotTit, fc){
       plotly::layout(title = plotTit ,xaxis = list(title = 'Year'),yaxis = list(title = 'Kiloton'))
 
 
+
   } else{
     f <- plotly::plot_ly() %>%
       plotly::add_lines(x = time(tsdata), y = tsdata,
