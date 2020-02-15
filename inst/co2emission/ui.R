@@ -5,7 +5,7 @@ ui <- shiny::fluidPage(
   # Load bootstrap and customize CSS file
   theme = "bootstrap.css",
   includeCSS("www/styles.css"),
-
+  div(
    shiny::navbarPage(
       "CO2 EMISSION",
       id = "main_navbar",
@@ -45,5 +45,6 @@ ui <- shiny::fluidPage(
         )
       )
     )
+)
 )
 
