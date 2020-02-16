@@ -51,6 +51,7 @@ server <- function(input, output) {
 
     if(forecastCheck){
       shinyjs::show(id = "lag")
+      shinyjs::hide(id = "range")
       numberOfLag <- input$lag
       autoarima1 <- forecast::auto.arima(tsdata)
       forecast1 <- forecast::forecast(autoarima1, h=numberOfLag)
@@ -58,6 +59,7 @@ server <- function(input, output) {
 
     }else{
       shinyjs::hide(id = "lag")
+      shinyjs::show(id = "range")
       p <- plotData(tsdata =  tsdata, plotTit = plotTitle, fc = forecastCheck)
     }
   })
